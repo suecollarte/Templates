@@ -1,0 +1,16 @@
+<div>
+    
+    <h1> Productos </h1>
+{{#if PRODUCTO_DB}}
+{{#each PRODUCTO_DB}}
+    <ul> 
+        <li> {{this.nombre}}</li>
+        <li> {{this.precio}}</li>
+        <li> {{this.thumbail}}</li>
+    </ul>
+    {{/each}}
+{{else}}
+<h2>No se encuentran</h2>
+{{/if}}
+
+</div>
