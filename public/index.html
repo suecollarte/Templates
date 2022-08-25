@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBS Productos</title>
+    <link rel="stylesheet" type="text/css" href="./public/style.css">
+</link>
+</head>
+<body>
+    
+    <span>
 
+    </span>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+<script>
+const TemplateStr=`
+<h1> Productos </h1>
+    <ul> 
+        <li> {{nombre}}</li>
+        <li> {{precio}}</li>
+        <li> {{thumbail}}</li>
+    </ul>`;
+    const template=Handlebars.compile(TemplateStr);
+
+    const context=
+  {
+    "nombre": "Escuadra",
+    "precio": "123.45",
+    "thumbail": "https://cdn3.iconfinder.com/data/icons/education/64/ruler-trianglestationary-school-256.png"
+  }
+
+const html=template(context);
+document.querySelector('span').innerHTML=html
+    
+
+</script>
+
+</body>
+</html>
